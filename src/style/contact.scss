@@ -1,0 +1,95 @@
+// <div className="contact-wrapper">
+//         <div className="contact">
+//           <div className="left-columnC">
+//             <img src={`${ContactImg}`} alt="contactPageImage" />
+//           </div>
+//           <div className="right-columnC">
+//             <div className="number"><p>636-700-2634</p></div>
+//             <div className="email"><p>enochleb123@gmail.com</p></div>
+//             <div className="location"><p>chihuahua Mexico</p></div>
+//           </div>
+//         </div>
+//       </div>
+
+.contact-wrapper {
+  margin-top: 40px;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+}
+
+.left-columnC img {
+  width: 50vw;
+  height: calc(100vh - 64px);
+}
+
+.right-columnC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-columnC p {
+  font-size: 200%;
+  margin-bottom: 10px;
+}
+
+.email {
+  span {
+    font-size: 50%;
+  }
+}
+
+.columnC {
+  background-color: teal;
+  padding: 40px;
+  box-shadow: 0px 0px 10px 1px;
+
+  border-radius: 30px;
+}
+
+.columnC:hover {
+  // box-shadow: 1px 1px 1px 1px;
+}
+
+//  // // // // // // // / / / / // / / / /
+
+@media (max-width: 500px) {
+  .contact > .left-columnC img {
+    width: 0px;
+    height: 0px;
+  }
+
+  .right-columnC {
+    margin-top: 80px;
+    background-color: #ccc;
+    padding: 10px;
+    transition: 0.3s;
+    border: 2px solid black;
+  }
+
+  .right-columnC p {
+    font-size: 200%;
+    font-weight: bold;
+  }
+
+  .contact-wrapper {
+    border: 5px solid black;
+    background-image: url("/static/assets/IMAGES/contact.jpg");
+    height: calc(100vh - 40px);
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

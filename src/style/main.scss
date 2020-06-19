@@ -1,0 +1,76 @@
+@import "./Settings.scss";
+@import "./nav.scss";
+@import "./dropdown.scss";
+@import "./contact.scss";
+@import "./about.scss";
+@import "./home.scss";
+html {
+  font-size: 62.5%; // 1rem is 10px
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+}
+
+body {
+  overflow-x: hidden;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #b7bbbd;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  display: grid;
+  justify-items: center;
+}
+
+.comUserWrapper {
+  text-decoration: none;
+  color: #221222;
+  cursor: pointer;
+  background-color: slategrey;
+  width: 100px;
+  max-height: 150px;
+  min-height: 150px;
+  padding: 10px;
+  transition: ease-in-out 0.1s;
+}
+
+.comUserWrapper:hover {
+  box-shadow: 2px 2px 2.5px 0.6px;
+}
+
+.userWrapper {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.userTitle {
+  margin-top: 30%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userImage {
+  max-width: 100px;
+  border-radius: 100px;
+}
+
+.userContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}

@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+header {
+  height: 200px;
+  width: 100vw;
+  clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+  background: var(--bg-nav);
+  margin-bottom: 1em;
+  padding-bottom: 3.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-worker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme {
+  background-color: var(--border-color);
+  width: 100%;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.dropdownS {
+  background: var(--bg-dropdown);
+  border-top: 2px solid var(--border-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 3rem;
+  padding: 0.5rem;
+
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
+
+  transition: opacity 0.15s ease-out;
+}
+
+.dropdown-item a {
+  width: 100%;
+  height: 100%;
+  size: 0.7rem;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.dropdown-item a::before {
+  content: " ";
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Themes */
+
+:root {
+  --gray0: #f8f8f8;
+  --gray1: #dbe1e8;
+  --gray2: #b2becd;
+  --gray3: #6c7983;
+  --gray4: #454e56;
+  --gray5: #2a2e35;
+  --gray6: #12181b;
+  --blue: #0084a5;
+  --purple: #a82dd1;
+  --yellow: #fff565;
+}
+
+.light {
+  --bg: var(--gray0);
+  --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+  --bg-dropdown: var(--gray0);
+  --text: var(--gray6);
+  --border-color: var(--blue);
+  --bg-solar: var(--yellow);
+
+  a {
+    color: var(--gray6);
+  }
+  transition: 1s all;
+}
+
+.dark {
+  --bg: var(--gray5);
+  --bg-nav: linear-gradient(to right, var(--gray4), var(--gray6));
+  --bg-dropdown: var(--gray6);
+  --text: var(--gray0);
+  --border-color: var(--purple);
+  --bg-solar: var(--blue);
+  transition: 1s;
+}
+
+.solar {
+  --bg: var(--gray3);
+  --bg-nav: linear-gradient(to right, var(--gray0), var(--gray6));
+  --bg-dropdown: var(--gray4);
+  --text: var(--gray2);
+  --border-color: #f79d5c;
+  --bg-solar: var(--blue);
+
+  a {
+    color: #aaa;
+  }
+  transition: 1s;
+}
+
+#dark::before {
+  background: #2a2e35;
+}
+
+#light::before {
+  background: #ffffff;
+}
+
+#solar::before {
+  background: var(--yellow);
+}
+
+/* Logo Animation */
+
+@keyframes color-rotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+main {
+  margin-top: -100px;
+  min-height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.handleClick {
+  margin-top: 100px;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  background-color: blue;
+  width: 50vw;
+  height: 400px;
+  text-align: center;
+
+  .handleClick::before {
+    content: "the color is blue";
+    font-size: 10px;
+    padding: 9px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+  }
+}
+
+.pink {
+  background-color: pink;
+  width: 50vw;
+  height: 400px;
+  text-align: center;
+
+  .handleClick::before {
+    content: "the color is pink";
+    font-size: 10px;
+    padding: 9px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+  }
+}
+
+.red {
+  background-color: red;
+  width: 50vw;
+  height: 400px;
+  text-align: center;
+
+  .handleClick::before {
+    content: "the color is red";
+    font-size: 10px;
+    padding: 9px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+  }
+}
+
+.purple {
+  background-color: purple;
+  width: 50vw;
+  height: 400px;
+  text-align: center;
+
+  .handleClick::before {
+    content: "the color is purple";
+    font-size: 10px;
+    padding: 9px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+  }
+}
+
+// theme buttons
+
+.left-column-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2px 20px 2px 20px;
+}
+
+.right-column-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 20px 2px 20px;
+}
+
+.button-blue,
+.button-pink,
+.button-red,
+.button-purple {
+  max-width: 400px;
+  min-width: 100px;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  font-weight: bolder;
+  transition: 0.2s;
+}
+
+.button-blue:hover,
+.button-pink:hover,
+.button-red:hover,
+.button-purple:hover {
+  filter: brightness(70%);
+}
+
+.button-blue {
+  background-color: blue;
+}
+
+.button-pink {
+  background-color: pink;
+}
+
+.button-red {
+  background-color: red;
+}
+
+.button-purple {
+  background-color: purple;
+}
