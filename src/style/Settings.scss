@@ -102,6 +102,8 @@ header {
   --text: var(--gray6);
   --border-color: var(--blue);
   --bg-solar: var(--yellow);
+  width: 100vw;
+  height: 500px;
 
   a {
     color: var(--gray6);
@@ -116,6 +118,9 @@ header {
   --text: var(--gray0);
   --border-color: var(--purple);
   --bg-solar: var(--blue);
+  width: 100vw;
+  height: 500px;
+
   transition: 1s;
 }
 
@@ -125,6 +130,8 @@ header {
   --bg-dropdown: var(--gray4);
   --text: var(--gray2);
   --border-color: #f79d5c;
+  height: 500px;
+  width: 100vw;
   --bg-solar: var(--blue);
 
   a {
@@ -176,7 +183,7 @@ main {
 }
 
 .blue {
-  background-color: blue;
+  background-color: #0b4f6c;
   width: 50vw;
   height: 400px;
   text-align: center;
@@ -191,7 +198,7 @@ main {
 }
 
 .pink {
-  background-color: pink;
+  background-color: #ffccc9;
   width: 50vw;
   height: 400px;
   text-align: center;
@@ -206,7 +213,7 @@ main {
 }
 
 .red {
-  background-color: red;
+  background-color: #bc4749;
   width: 50vw;
   height: 400px;
   text-align: center;
@@ -221,7 +228,7 @@ main {
 }
 
 .purple {
-  background-color: purple;
+  background-color: #403d58;
   width: 50vw;
   height: 400px;
   text-align: center;

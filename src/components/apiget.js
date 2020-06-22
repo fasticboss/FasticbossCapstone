@@ -4,7 +4,7 @@ import axios from "axios";
 import { data } from "autoprefixer";
 import ReactHtmlParser from "react-html-parser";
 
-import { getBlogItem } from "../Test";
+import { getBlogItem } from "./user";
 
 export default class ApiGet extends Component {
   constructor() {

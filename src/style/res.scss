@@ -1,0 +1,62 @@
+.resWrapper {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+// textareaWrapper  inputWrapper
+
+.inputWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.inputWrapper input {
+  background-color: darkgray;
+  border: 1px solid #111;
+  outline: none;
+}
+
+input {
+  background-color: darkgray;
+  border: 1px solid #111;
+  outline: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.selectWrapper {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+select {
+  height: 20px;
+  margin-top: 10px;
+  background-color: darkgray;
+  border: 1px solid #111;
+  outline: none;
+}
+
+.textareaWrapper textarea {
+  margin-top: 10px;
+  background-color: darkgray;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  border: 1px solid #111;
+  padding: 10px;
+  outline: none;
+}
+
+.btnR {
+  border: 1px solid #111;
+  outline: none;
+  color: teal;
+  padding: 2px;
+  background-color: darkgray;
+}

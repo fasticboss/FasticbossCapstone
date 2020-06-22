@@ -1,0 +1,78 @@
+.user-profile {
+  padding-top: 40px;
+}
+
+.users-wrapperU {
+  width: 100vw;
+  padding: 0px 30px 0px 30px;
+}
+
+.usersU {
+  width: 100vw;
+}
+
+.userU {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #111;
+  background-color: #aaa;
+  margin-bottom: 10px;
+  padding: 3px;
+  color: #111;
+  max-height: fit-content;
+}
+
+.usernameU {
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+  color: teal;
+}
+
+.emailU {
+  color: teal;
+  letter-spacing: 0.5px;
+}
+
+.aUser {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.userLinkWrapper {
+  width: 100%;
+  text-align: end;
+}
+
+.userLinkU {
+  font-size: 25px;
+  color: teal;
+  transition: 0.3s;
+}
+
+.userLinkU:hover {
+  color: steelblue;
+}
+
+// descriptionE desWrapper emailE usernameE user user-profile borf
+
+.desWrapper {
+  border: 1px solid teal;
+  width: 80vw;
+  max-height: max-content;
+  min-height: fit-content;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: darkgray;
+}
+
+.descriptionE {
+  color: #001021;
+}
+
+.user {
+  text-align: center;
+}
+
+.borf {
+  margin-top: 10px;
+}

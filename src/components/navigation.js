@@ -9,6 +9,8 @@ import {
   faPlus,
   faHome,
   faThLarge,
+  faUsers,
+  faMale,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
@@ -19,6 +21,10 @@ function Navigation() {
     <Navbar>
       <Link className="homenav" to="/">
         <NavItem icon={<FontAwesomeIcon icon={faHome} />} />
+      </Link>
+
+      <Link className="homenav" to="/users">
+        <NavItem icon={<FontAwesomeIcon icon={faUsers} />} />
       </Link>
 
       <NavItem className="homenav" icon={<FontAwesomeIcon icon={faSortDown} />}>
@@ -41,6 +47,13 @@ function DropdownMenu() {
   }
   return (
     <div className="dropdown">
+      <Link to="/registration">
+        <DropdownItem
+          leftIcon={<FontAwesomeIcon icon={faMale} />}
+          rightIcon="Add Profile"
+        ></DropdownItem>
+      </Link>
+
       <Link to="/about">
         <DropdownItem
           leftIcon={<FontAwesomeIcon icon={faAddressBook} />}

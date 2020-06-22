@@ -1,0 +1,195 @@
+/*  import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { data } from "autoprefixer";
+import ReactHtmlParser from "react-html-parser";
+
+export default class Users extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      users: [],
+    };
+
+    this.userListMaker3000 = this.userListMaker3000.bind(this);
+  }
+
+  componentDidMount() {
+    axios.get(`http://localhost:3000/users`).then((res) => {
+      console.log("res", res);
+      res.data.map((item) => {
+        this.setState({
+          users: this.state.users.concat(item),
+        });
+      });
+    });
+  }
+
+  userListMaker3000() {
+    return this.state.users.map((user) => {
+      if (user.email == null) {
+        return (
+          <div className="usersU">
+            <Link
+              to={`user-profile/${user.id}`}
+              key={user.id}
+              className="user-wrapperU"
+            >
+              <div>
+                <h1 className="usernameU">{user.username}</h1>
+              </div>
+            </Link>
+          </div>
+        );
+      }
+
+      return (
+        <div className="users-wrapperU">
+          <Link to={`user-profile/${user.id}`} key={user.id} className="userU">
+            <div>
+              <h3 className="usernameU">{user.username}</h3>
+              <h4> {user.email} </h4>
+            </div>
+          </Link>
+        </div>
+      );
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1> USERS </h1>
+        <br />
+        <br />
+        <div>
+          <ul className="userWrapper">
+            <this.userListMaker3000 />
+          </ul>
+        </div>
+      </div>
+    );
+  }
+}
+
+.user-profile {
+    padding-top: 40px;
+  }
+  
+  .users-wrapperU {
+    width: 100vw;
+    padding: 0px 30px 0px 30px;
+  }
+  
+  .usersU {
+    width: 100vw;
+  }
+  
+  .userU {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #111;
+    background-color: #aaa;
+    margin-bottom: 10px;
+    padding: 3px;
+    color: #111;
+  }
+  
+  .usernameU {
+    margin-bottom: 4px;
+    color: teal;
+    letter-spacing: 0.5px;
+  }
+  
+  .emailU {
+    color: teal;
+    letter-spacing: 0.5px;
+  }
+  
+  .userLinkWrapper {
+    width: 100%;
+    text-align: end;
+  }
+  
+  .userWrapper {
+    display: flex;
+  }
+  
+  .userLinkU {
+    font-size: 30px;
+    color: teal;
+  }
+
+  
+  
+// import React, { Component } from "react";
+
+// export default class Users extends Component {
+//     constructor() {
+//         super();
+
+//         this.state = {
+//             username: "username: ",
+//             email: "email: "
+//         }
+//     }
+
+//   render() {
+//     return (
+//       <div className="users-wrapper">
+//         <div className="users">
+//           <h1 className="h1user">check out the users page</h1>
+
+//           <div className="user">
+//             <h3 className="username">Fasticboss</h3>
+//             <h4 className="email">enochleb123@gmail.com</h4>
+//           </div>
+//           <div className="user">
+//             <h3 className="username">example</h3>
+//             <h4 className="email">exapmle@gmail.com</h4>
+//           </div>
+//           <div className="user">
+//             <h3 className="username">Avery</h3>
+//             <h4 className="email">Avery242@gmail.com</h4>
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
+
+// import React, { Component } from "react";
+// import axios from "axios";
+
+// export default class Users extends Component {
+//   constructor() {
+//     super();
+
+//     this.state = {
+//       username: "username: empty",
+//       email: "email: empty",
+//     };
+//   }
+
+//   componentDidMount() {
+//     axios.get("http://localhost:3000/users").then((res) => {
+//       console.log("res", res);
+
+//       this.setState({
+//         username: res.data.username,
+//         email: res.data.email,
+//       });
+//     });
+//     console.log(this.state.username);
+//   }
+
+//   render() {
+//     return (
+//       <div className="users-wrapper">
+//         <div className="users">Hi</div>
+//       </div>
+//     );
+//   }
+// }
+*/

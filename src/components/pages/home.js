@@ -12,7 +12,8 @@ export default class HomePage extends Component {
       dynamicColor2: "pink",
       dynamicTheme: "dark",
 
-      theme: "dark",
+      title: "Home",
+      content: "Check out the theme page",
     };
     this.updateColorPink = this.updateColorPink.bind(this);
     this.updateColorBlue = this.updateColorBlue.bind(this);
@@ -227,6 +228,33 @@ export default class HomePage extends Component {
   // <div className={this.state.dynamicTheme}></div>
 
   render() {
-    return <div className="home-wrapper"></div>;
+    return (
+      <div className="home-wrapper">
+        <div className="home">
+          <div className={this.state.dynamicTheme}>
+            <div className="titleH">
+              <h1>{this.state.title}</h1>
+            </div>
+
+            <div className="contentH">{this.state.content}</div>
+          </div>
+
+          <div className="columnsH">
+            <div className="left-columnH">
+              <div className={this.state.dynamicColor1}>
+                <div className="content1">
+                  <h1>Learn code</h1>
+
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div className="right-columnS">
+              <div className={this.state.dynamicColor}> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 }

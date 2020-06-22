@@ -14,44 +14,32 @@ export default class TestApp extends Component {
   }
 
   componentDidMount() {
-    console.log("currentID", this.state.currentId);
-
     axios
-      .get(
-        `https://fasticboss.devcamp.space/portfolio/portfolio_blogs/${this.state.currentId}`
-      )
+      .get(`http://localhost:3000/users/${this.state.currentId}`)
       .then((res) => {
-        console.log("API REQ ", res);
         this.setState({
-          blogItem: res.data.portfolio_blog,
+          blogItem: res.data,
         });
       })
       .catch((error) => {
-        console.log("getBlogItem error", error);
+        console.error("getBlogItem error", error);
       });
   }
 
   render() {
-    const {
-      title,
-      content,
-      featured_image_url,
-      blog_status,
-    } = this.state.blogItem;
-
-
+    const { username, email, description, borf } = this.state.blogItem;
 
     const contentManager = () => {
-
-      
-
       return (
-        <div>
-          <h1>{title}</h1>
-
-          <img src={featured_image_url} />
-
-          <div className="content">{ReactHtmlParser(content)}</div>
+        <div className="user-profile">
+          <div className="user">
+            <h1 className="usernameE">{username}</h1>
+            <div className="emailE">{email}</div>
+            <div className="borf">{borf}</div>
+            <div className="desWrapper">
+              <div className="descriptionE"> {description} </div>
+            </div>
+          </div>
         </div>
       );
     };
